@@ -1,0 +1,22 @@
+.my_card{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+}
+.link{
+   color: black;
+   text-decoration: none;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Poppins';
+    color: #161616;
+
+}
