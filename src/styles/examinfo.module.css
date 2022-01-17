@@ -1,0 +1,38 @@
+.info_card{
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 2rem;
+    font-family: 'Poppins';
+}
+.heading{
+    font-family: 'Poppins';
+    text-align: center;
+    margin: 3rem auto;
+}
+.info_card h3{
+    margin: 1rem auto;
+}
+.info_card table{
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem auto;
+}
+.info_card p{
+    font-size: 1.2rem;
+    margin: 1rem auto;
+}
+.info_card h6{
+    font-size: 1.2rem;
+    margin: 1rem auto;
+}
+.info_card button{
+    display: block;
+    width: 60%;
+    margin: 1rem auto;
+}

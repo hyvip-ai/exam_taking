@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTestById } from "../functions/getAllList";
 import { v4 as uuid } from "uuid";
+import classes from "../styles/examinfo.module.css";
 function TestInfo() {
   const { testId } = useParams();
   const [testDetails, setTestDetails] = useState(null);
@@ -14,15 +15,15 @@ function TestInfo() {
   }, [testId]);
   return (
     <React.Fragment>
-      <h1>Test Details</h1>
+      <h1 className={classes.heading}>Test Details</h1>
       {testDetails ? (
-        <>
-          <h3>This Test is about : {testDetails.subject}</h3>
+        <div className={classes.info_card}>
+          <h3>This Test is about : <b>{testDetails.subject}</b></h3>
           <p>
-            This test has {testDetails.test.length} questions (Details of the
+            This test has <b>{testDetails.test.length}</b> questions (Details of the
             questions are as below){" "}
           </p>
-          <table>
+          <table className="table">
             <thead>
               <tr>
                 <th>Serial Number</th>
@@ -41,13 +42,15 @@ function TestInfo() {
             </tbody>
           </table>
           <h6>
-            Total Marks :{" "}
+            Total Marks :
+            <b>
             {testDetails.test.reduce((acc, item) => {
               return (acc += item.marks);
             }, 0)}
+            </b>
           </h6>
           <button className="btn btn-outline-dark">Start Test</button>
-        </>
+        </div>
       ) : (
         <h1>Loading...</h1>
       )}
