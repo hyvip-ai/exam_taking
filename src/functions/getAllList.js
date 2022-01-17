@@ -8,7 +8,11 @@ function getCategoriesFromLocalStorage(){
     let categories = JSON.parse(localStorage.getItem('categories'))
     return categories
 }
-
+function getTestById(id){
+    let testData = JSON.parse(localStorage.getItem("test"))
+    const requiredTest = testData.filter((item)=>{return item.id === id})
+    return requiredTest
+}
 function setToLocalStorage(data){
     let previousCategories = JSON.parse(localStorage.getItem('categories')) || []
     console.log(previousCategories.some(item=>item.category === data.subject))
@@ -39,4 +43,4 @@ function setToLocalStorage(data){
     localStorage.setItem("test",newTestData)
 }
 
-export {getTestFromLocalStorage,setToLocalStorage,getCategoriesFromLocalStorage}
+export {getTestFromLocalStorage,setToLocalStorage,getCategoriesFromLocalStorage,getTestById}

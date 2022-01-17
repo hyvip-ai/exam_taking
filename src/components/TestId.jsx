@@ -6,7 +6,7 @@ function TestId({data}) {
         <React.Fragment>
             {
                 data.map(item=>{
-                    return <Link key={item} to={`/tests/${item}`}>
+                    return <Link key={item} to={`/test/info/${item}`}>
                         <p className={classes.link}>
                             {item}
                         </p>

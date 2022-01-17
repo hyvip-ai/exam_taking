@@ -3,7 +3,6 @@ import CategoryList from '../components/CategoryList'
 import {getCategoriesFromLocalStorage} from "../functions/getAllList"
 import {v4 as uuid} from 'uuid'
 function All() {
-    
     const [categories, setCategories] = useState([])
     useEffect(()=>{
         let data = getCategoriesFromLocalStorage()
