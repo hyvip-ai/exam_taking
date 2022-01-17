@@ -1,0 +1,28 @@
+.fancyHead{
+    font-size: 2rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    margin: 1rem auto;
+}
+.fancyHead::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    background-color: black;
+    top: 50%;
+    right: 15%;
+}
+.fancyHead::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    background-color: black;
+    top: 50%;
+    left: 15%;
+}

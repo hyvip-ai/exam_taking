@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getTestById } from "../functions/getAllList";
 import { v4 as uuid } from "uuid";
 import classes from "../styles/examinfo.module.css";
@@ -8,7 +8,6 @@ function TestInfo() {
   const [testDetails, setTestDetails] = useState(null);
   useEffect(() => {
     const data = getTestById(testId);
-    console.log(data);
     setTestDetails({
       ...data[0],
     });
@@ -49,7 +48,7 @@ function TestInfo() {
             }, 0)}
             </b>
           </h6>
-          <button className="btn btn-outline-dark">Start Test</button>
+          <button className="btn btn-outline-dark"><Link to={`/test/${testId}`}>Start Test</Link></button>
         </div>
       ) : (
         <h1>Loading...</h1>
