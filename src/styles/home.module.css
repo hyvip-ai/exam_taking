@@ -7,11 +7,16 @@
   align-items: center; 
 }
 .home button {
-  display: flex;
+  display: block;
   width: 80%;
   justify-content: center;
   align-items: center;
   margin: 2rem;
   padding: 1rem;
   font-size: 20px;
+}
+.home button a{
+  display: block;
+  height: 100%;
+  width:100%;
 }

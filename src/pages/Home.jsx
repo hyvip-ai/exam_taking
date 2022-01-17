@@ -5,7 +5,7 @@ function Home() {
     return (
         <div className={classes.home}>
             <button className='btn btn-outline-info'><Link to={"/all"}>Get all Test Id</Link></button>
-            <button className='btn btn-outline-primary'><Link to={"/new"}>Create a New Test</Link></button>
+            <button className='btn btn-outline-primary'><Link to={"/create_new"}>Create a New Test</Link></button>
         </div>
     )
 }

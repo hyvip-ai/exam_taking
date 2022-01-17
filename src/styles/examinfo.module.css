@@ -36,3 +36,11 @@
     width: 60%;
     margin: 1rem auto;
 }
+.info_card button a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.info_card button:hover a{
+    color: white!important;
+}

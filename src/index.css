@@ -10,13 +10,11 @@ code {
 }
 a{
   text-decoration: none!important;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 0.5rem;
-  font-size: 1.1rem;
   font-family: 'Poppins';
   font-weight: 500;
-
+  color: black;
+  font-size: 1.2rem;
+}
+a:hover{
+  color: black;
 }

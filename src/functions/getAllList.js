@@ -42,5 +42,13 @@ function setToLocalStorage(data){
     let newTestData = JSON.stringify(newTest)
     localStorage.setItem("test",newTestData)
 }
-
-export {getTestFromLocalStorage,setToLocalStorage,getCategoriesFromLocalStorage,getTestById}
+function setUserAnswerToLocalStorage(data){
+    localStorage.setItem('answers',JSON.stringify(data))
+}
+function getUserGivenAnswer(){
+    return JSON.parse(localStorage.getItem('answers'))|| []
+}
+function clearUserAnswer(){
+    localStorage.removeItem('answers')
+}
+export {getTestFromLocalStorage,setToLocalStorage,getCategoriesFromLocalStorage,getTestById,setUserAnswerToLocalStorage,getUserGivenAnswer,clearUserAnswer}

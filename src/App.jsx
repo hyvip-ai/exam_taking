@@ -1,19 +1,24 @@
 import React from "react";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import { useState } from "react/cjs/react.development";
 import All from "./pages/All";
 import Home from "./pages/Home";
+import NewTest from "./pages/NewTest";
+import Result from "./pages/Result";
 import TakeTest from "./pages/TakeTest";
 import TestInfo from "./pages/TestInfo";
 function App() {
+  const [marks,setMarks] = useState({marks:0,total:0})
   return (
    <React.Fragment>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/all" element={<All />} />
-          <Route path="/test/:testId" element={<TakeTest />} />
+          <Route path="/test/:testId" element={<TakeTest setMarks={setMarks}/>} />
           <Route path="/test/info/:testId" element={<TestInfo />} />
-          
+          <Route path="/results" element={<Result marks={marks} />} />
+          <Route path="/create_new" element={<NewTest />} />
         </Routes>
       </BrowserRouter>
    </React.Fragment>
