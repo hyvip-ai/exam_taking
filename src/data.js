@@ -1,4 +1,4 @@
-
+import {v4 as uuid} from 'uuid'
 const questions = [
   {
     question:
@@ -75,11 +75,18 @@ const questions = [
     answers: ["Max Caulfield", "Rachel Amber", "Frank Bowers","Chloe Price"],
     marks:1
   },
+  {
+    question:
+      "Who is the main protagonist in the game Life is Strange: Before The Storm?",
+    correct_answer: "Chloe Price",
+    answers: ["Max Caulfield", "Rachel Amber", "Frank Bowers","Chloe Price"],
+    marks:5
+  }
 ];
 
 const test1 = {
-    id: "62c36d6c-9cee-4013-8db5-7490d4aa7c3f",
-    subject: "cars",
+    id: uuid(),
+    subject: "Computer",
     test: [...questions],
   };
 

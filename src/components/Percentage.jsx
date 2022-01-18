@@ -4,7 +4,7 @@ import Heading from './Heading'
 function Percentage({marks,total}) {
 
     return (
-        <Heading data={`Percentage : ${(marks/total)*100}%`} />
+        <Heading data={`Percentage : ${Math.round((marks/total)*100)}%`} />
     )
 }
 

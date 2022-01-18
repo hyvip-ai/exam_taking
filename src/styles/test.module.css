@@ -15,7 +15,6 @@
 }
 .ques_button.active{
     background-color: rgb(105, 49, 218);
-    color: black;
 }
 .navigation{
     display: flex;

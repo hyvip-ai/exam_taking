@@ -29,9 +29,10 @@ function setToLocalStorage(data){
     let previousTest = JSON.parse(localStorage.getItem("test")) || []
     let newTest = []
     let includes = previousTest.some(item=>{
-        return item.id === data.id
+        return item.id === data.id && item.subject === data.subject
     })
-    newTest = includes?[...previousTest]:[data]
+    console.log(includes)
+    newTest = includes?[...previousTest]:[...previousTest,data]
     let newTestData = JSON.stringify(newTest)
     localStorage.setItem("test",newTestData)
 }
