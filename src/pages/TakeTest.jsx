@@ -63,6 +63,7 @@ function TakeTest({setMarks}) {
 
   return (
     <div>
+      <MarginTop val={2} />
       <Heading data="Best Of Luck For Your Exam" />
       <FancyHeading data="Questions" />
       {question.length ? (
@@ -74,7 +75,7 @@ function TakeTest({setMarks}) {
             })}
             </div>
             <MarginTop val={4} />
-            <FancyHeading data={`Question ${visibleQues}`} />
+            <FancyHeading data={`Question ${visibleQues} (Marks:${question[visibleQues-1].marks})`} />
             <QuestionBlock data={question[visibleQues-1]} index={visibleQues-1} setUserAnswer={setUserAnswer} userAnswer={userAnswer}/>
             <Navigation setVisibleQues={setVisibleQues} max={question.length}/>
             <button className={classes.submit} onClick={calculateMarks}>Submit</button>

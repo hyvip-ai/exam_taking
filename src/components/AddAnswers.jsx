@@ -1,10 +1,15 @@
 import React from 'react'
-
-function AddAnswers({test}) {
+import AddAnswerColumn from './AddAnswerColumn'
+import {v4 as uuid} from 'uuid'
+function AddAnswers({test,setTestData}) {
     return (
-        <div>
-            <h1>This is the add Answers Component</h1>
-        </div>
+        <React.Fragment>
+                {
+                    test.test.map((item,index)=>{
+                       return <AddAnswerColumn id={index} key={uuid()} data={item} setTestData={setTestData} />
+                    })
+                }
+        </React.Fragment>
     )
 }
 

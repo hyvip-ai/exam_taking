@@ -15,8 +15,6 @@ function NewTest() {
     questionsArray = questionsArray.map(item=>{return {question:item}})
     let subject = document.getElementById("subject").value
     subject = capitalizeFirstLetter(subject)
-    console.log(questionsArray);
-    console.log(subject);
     setTestData((prev)=>{
         return {
             ...prev,
@@ -31,7 +29,7 @@ function NewTest() {
       <AddQuestions/>
       <button className={classes.step_btn} onClick={clickHandler}>Submit For Next Step</button>
       {
-           testData.test?<AddAnswers test={testData.test} />:null
+           testData.test?<AddAnswers test={testData} setTestData={setTestData} />:null
       }
     </React.Fragment>
   );

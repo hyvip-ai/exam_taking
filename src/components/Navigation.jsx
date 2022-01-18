@@ -4,7 +4,7 @@ import classes from "../styles/test.module.css";
 function Navigation({ setVisibleQues, max }) {
   const increaseHandler = () => {
     setVisibleQues((prev) => {
-      return (prev % 10) + 1;
+      return (prev % max) + 1;
     });
   };
   const decreaseHandler = () => {

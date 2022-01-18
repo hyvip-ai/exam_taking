@@ -1,17 +1,31 @@
-.step_btn{
-    display: block;
-    width: 60%;
-    background-color: black;
-    color: white;
-    margin: 2rem auto;
-    border: none;
-    outline: none;
-    padding: 0.6rem;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    font-family: 'Poppins';
-    font-weight: 600;
+.step_btn {
+  display: block;
+  width: 60%;
+  background-color: black;
+  color: white;
+  margin: 2rem auto;
+  border: none;
+  outline: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  font-weight: 600;
 }
-.step_btn:active{
-    transform: scale(0.95);
+.step_btn:active {
+  transform: scale(0.95);
+}
+.answer_card {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.answer_card p{
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-align: center;
+
 }
