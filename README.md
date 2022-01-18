@@ -4,19 +4,13 @@
 
 # Each Question of one test
 
-```JavaScript
+```JSON
 
 question:{
-id:"string",
-    result:[
-        {
             question:"string",
             answers:["string","string","string","string"],
             correct_answer:"string",
-            marks:"number",
-
-        }
-    ]
+            marks:"number",     
 }
 
 ```
@@ -35,22 +29,16 @@ id:"string",
 ```
 
 ---
-
-# User Answer
-
+ 
+# User whole answer
 ```JavaScript
 
-    answer:{
-        id:"string",
-        answer:"string"
-    }
-
-```
-   --- 
-# whole answer
-```JavaScript
-
-    answers:["answer","answer"]
+    answers:["string","string"]
 ```
 
 - [x] create home page
+- [x] Categories Page (Exam List)
+- [x] Exam Details Page
+- [x] Exam Taking Page
+- [x] Result Page
+- [ ] Exam Cretion page 
