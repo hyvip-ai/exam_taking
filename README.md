@@ -41,4 +41,4 @@ question:{
 - [x] Exam Details Page
 - [x] Exam Taking Page
 - [x] Result Page
-- [ ] Exam Cretion page 
+- [x] Exam Cretion page 
