@@ -4,7 +4,7 @@
 
 # Each Question of one test
 
-```JSON
+```JavaScript
 
 question:{
             question:"string",
