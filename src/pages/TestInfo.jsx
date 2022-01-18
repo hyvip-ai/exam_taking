@@ -9,7 +9,7 @@ function TestInfo() {
   useEffect(() => {
     const data = getTestById(testId);
     setTestDetails({
-      ...data[0],
+      ...data,
     });
   }, [testId]);
   return (

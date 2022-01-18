@@ -1,9 +1,3 @@
-
-function getTestFromLocalStorage(){
-    let testData = JSON.parse(localStorage.getItem("test"))
-    return testData
-}
-
 function getCategoriesFromLocalStorage(){
     let categories = JSON.parse(localStorage.getItem('categories'))
     return categories
@@ -11,11 +5,10 @@ function getCategoriesFromLocalStorage(){
 function getTestById(id){
     let testData = JSON.parse(localStorage.getItem("test"))
     const requiredTest = testData.filter((item)=>{return item.id === id})
-    return requiredTest
+    return requiredTest[0]
 }
 function setToLocalStorage(data){
     let previousCategories = JSON.parse(localStorage.getItem('categories')) || []
-    console.log(previousCategories.some(item=>item.category === data.subject))
     let newCategories = []
     if(!previousCategories.some(item=>item.category === data.subject)){
         let categoryObject = {
@@ -51,4 +44,4 @@ function getUserGivenAnswer(){
 function clearUserAnswer(){
     localStorage.removeItem('answers')
 }
-export {getTestFromLocalStorage,setToLocalStorage,getCategoriesFromLocalStorage,getTestById,setUserAnswerToLocalStorage,getUserGivenAnswer,clearUserAnswer}
+export {setToLocalStorage,getCategoriesFromLocalStorage,getTestById,setUserAnswerToLocalStorage,getUserGivenAnswer,clearUserAnswer}

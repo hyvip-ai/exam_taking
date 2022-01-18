@@ -19,14 +19,14 @@ function TakeTest({setMarks}) {
   const [correctAnswer,setCorrectAnswer] = useState([])
   useEffect(()=>{
     const data = getTestById(testId);
-    data[0].test.map(item=>{
+    data.test.map(item=>{
       shuffle(item.answers);
       return item
     })
   
-    setQuestion([...data[0].test])
+    setQuestion([...data.test])
     let correct = []
-    for(let item of data[0].test){
+    for(let item of data.test){
       correct.push(item.correct_answer)
     }
     setCorrectAnswer(correct)
@@ -34,7 +34,7 @@ function TakeTest({setMarks}) {
   useEffect(() => {
     const data = getTestById(testId);
     if(!userAnswer.length){
-      setUserAnswer([...Array(data[0].test.length).keys()])
+      setUserAnswer([...Array(data.test.length).keys()])
     }
     else{
       setUserAnswerToLocalStorage(userAnswer)
