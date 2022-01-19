@@ -20,7 +20,7 @@ function All() {
                 {
                    categories.length? categories.map(item=>{
                     return <CategoryList key={uuid()} data={item}/>
-                }):<Heading data={"No Tests Presnsts At this moment please add some tests and try again"} />
+                }):<Heading data={"No Tests Present At this moment please add some tests and try again"} />
                 }
         </React.Fragment>
     )
