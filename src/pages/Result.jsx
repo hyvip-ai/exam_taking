@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import React,{useEffect} from 'react'
 import Heading from '../components/Heading'
 import classes from "../styles/result.module.css"
 import {clearUserAnswer} from "../functions/getAllList"

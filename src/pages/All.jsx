@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import CategoryList from '../components/CategoryList'
 import {getCategoriesFromLocalStorage} from "../functions/getAllList"
 import {v4 as uuid} from 'uuid'
+import Heading from '../components/Heading'
 function All() {
     const [categories, setCategories] = useState([])
     useEffect(()=>{
@@ -14,9 +15,9 @@ function All() {
     return (
         <React.Fragment>
                 {
-                    categories.map(item=>{
-                        return <CategoryList key={uuid()} data={item}/>
-                    })
+                   categories.length? categories.map(item=>{
+                    return <CategoryList key={uuid()} data={item}/>
+                }):<Heading data={"No Tests Presnsts At this moment please add some tests and try again"} />
                 }
         </React.Fragment>
     )
