@@ -1,6 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import { useState } from "react/cjs/react.development";
 import All from "./pages/All";
 import CreationSuccess from "./pages/CreationSuccess";
 import Home from "./pages/Home";
