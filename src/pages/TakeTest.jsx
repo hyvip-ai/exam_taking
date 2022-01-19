@@ -16,7 +16,6 @@ function TakeTest({setMarks}) {
   const [visibleQues,setVisibleQues] = useState(1)
   const [question,setQuestion] = useState([])
   const [userAnswer,setUserAnswer] = useState(getUserGivenAnswer())
-  const [correctAnswer,setCorrectAnswer] = useState([])
   useEffect(()=>{
     const data = getTestById(testId);
     data.test.map(item=>{
@@ -25,11 +24,6 @@ function TakeTest({setMarks}) {
     })
   
     setQuestion([...data.test])
-    let correct = []
-    for(let item of data.test){
-      correct.push(item.correct_answer)
-    }
-    setCorrectAnswer(correct)
   },[testId])
   useEffect(() => {
     const data = getTestById(testId);
@@ -41,9 +35,9 @@ function TakeTest({setMarks}) {
     }
   }, [testId,userAnswer]);
   const calculateMarks=()=>{
-    let marks = correctAnswer.reduce((acc,item,index)=>{
-      if(item === userAnswer[index]){
-        return acc+=1
+    let marks = question.reduce((acc,item,index)=>{
+      if(item.correct_answer === userAnswer[index]){
+        return acc+=item.marks
       }
       return acc
     },0)

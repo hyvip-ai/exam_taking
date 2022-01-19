@@ -7,7 +7,7 @@ function ExistingValue({ data }) {
       {data.answers ? (
         <>
           <p>
-            <b>Answers</b> : {data.answers}
+            <b>Answers</b> : {data.answers.join(' ,')}
           </p>
           <p>
             <b>Correct Answer</b> : {data.correct_answer}
