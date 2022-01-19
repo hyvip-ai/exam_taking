@@ -9,7 +9,10 @@ function All() {
         let data = getCategoriesFromLocalStorage()
         console.log(data)
         setCategories(prev=>{
-            return [...prev,...data]
+            if(data){
+                return [...prev,...data]
+            }
+            return [...prev]
         })
     },[])
     return (
