@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./pages/500";
 import All from "./pages/All";
 import CreationSuccess from "./pages/CreationSuccess";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import NewTest from "./pages/NewTest";
 import Result from "./pages/Result";
 import TakeTest from "./pages/TakeTest";
@@ -14,8 +14,8 @@ function App() {
     <React.Fragment>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/" element={<Error />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/error" element={<Error />} />
           <Route path="/all" element={<All />} />
           <Route
             path="/test/:testId"
